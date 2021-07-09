@@ -8,6 +8,7 @@ stopBtn.addEventListener('click', clickOnStop);
 const PROMT_DELAY = 1000
 let timeOutId = null
 let isActive = false;
+
 function clickOnStart() {
     if (isActive) {
         return;
@@ -20,14 +21,10 @@ function clickOnStart() {
 
 
 
-
 function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-function changeBodyBgcolor() {
-    console.log(document.body.style.background = `#${Math.floor(Math.random() * 16777215).toString(16)}`);
-}
 
 function clickOnStop() {
     clearInterval(intervalId);
