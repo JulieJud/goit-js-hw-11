@@ -3,10 +3,10 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./../images/demo.jpg":[["demo.090c7c6d.jpg","nKR3"],"nKR3"]}],"LLK9":[function(require,module,exports) {
 const t=document.querySelector("[data-start]"),e=document.querySelector("[data-stop]");t.addEventListener("click",a),e.addEventListener("click",l);const n=1e3;let o=null,r=!1;function a(){r||(r=!0,intervalId=setInterval(()=>{document.body.style.backgroundColor=c()},n))}function c(){return`#${Math.floor(16777215*Math.random()).toString(16)}`}function l(){clearInterval(intervalId),r=!1}
 },{}],"EEVQ":[function(require,module,exports) {
-
+function o(o){return{days:Math.floor(o/864e5),hours:Math.floor(o%864e5/36e5),minutes:Math.floor(o%864e5%36e5/6e4),seconds:Math.floor(o%864e5%36e5%6e4/1e3)}}console.log(o(2e3)),console.log(o(14e4)),console.log(o(2414e4));
 },{}],"LiEu":[function(require,module,exports) {
 const e=e=>Promise.resolve(e),a=e=>console.log(`Fulfilled after ${e}ms`);e(2e3).then(a),e(1e3).then(a),e(1500).then(a);const o=[{name:"Mango",active:!0},{name:"Poly",active:!1},{name:"Ajax",active:!1}],n=(e,a,o)=>{o(e.map(e=>e.name===a?{...e,active:!e.active}:e))};n(o,"Mango",console.table),n(o,"Ajax",console.table),n(o,"Mango").then(console.table),n(o,"Ajax").then(console.table);const t=(e,a)=>Math.floor(Math.random()*(a-e+1)+e),c=(e,a,o)=>{const n=t(200,500);setTimeout(()=>{Math.random()>.3?a({id:e.id,time:n}):o(e.id)},n)},i=({id:e,time:a})=>{console.log(`Transaction ${e} processed in ${a}ms`)},s=e=>{console.warn(`Error processing transaction ${e}. Please try again later.`)};c({id:70,amount:150},i,s),c({id:71,amount:230},i,s),c({id:70,amount:150}).then(i).catch(s),c({id:71,amount:230}).then(i).catch(s);
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/task-1"),require("./js/task-2"),require("./js/task-3");
 },{"./sass/main.scss":"clu1","./js/task-1":"LLK9","./js/task-2":"EEVQ","./js/task-3":"LiEu"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-11/src.346fb5fe.js.map
+//# sourceMappingURL=/goit-js-hw-11/src.35e0890a.js.map
