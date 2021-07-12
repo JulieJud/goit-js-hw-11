@@ -22,6 +22,7 @@ ul {
 .field {
   display: flex;
   align-items: baseline;
+  margin-top: 30px;
 }
 .field:not(:last-child) {
   margin-right: 50px;

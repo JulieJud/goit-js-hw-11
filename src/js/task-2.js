@@ -11,6 +11,7 @@ const refs = {
 }
 
 refs.choosedDate.addEventListener('change', dateChoosing)
+refs.startBtn.style.display = 'none';
 
 
 function dateChoosing() {
@@ -55,6 +56,7 @@ function dateChoosing() {
         refs.startBtn.removeEventListener('click', startCounter)
         
     }
+    refs.choosedDate.style.display = 'none';
     
 }
 
