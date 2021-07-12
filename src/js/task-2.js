@@ -11,7 +11,7 @@ const refs = {
 }
 
 refs.choosedDate.addEventListener('change', dateChoosing)
-refs.startBtn.style.display = 'none';
+//refs.startBtn.style.display = 'none';
 
 
 function dateChoosing() {
