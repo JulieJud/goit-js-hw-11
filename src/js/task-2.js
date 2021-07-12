@@ -51,11 +51,11 @@ function dateChoosing() {
                 clearInterval(intervalId);
             }
         }, 1000);
-        
+
         refs.startBtn.removeEventListener('click', startCounter)
-        refs.startBtn.disabled = true;
+        
     }
-    refs.choosedDate.style.display = 'none';
+    
 }
 
 
