@@ -33,10 +33,7 @@ function dateChoosing() {
 
     let convertTime = convertMs(time);
 
-    refs.days.textContent = convertTime.days;
-    refs.hours.textContent = convertTime.hours;
-    refs.minutes.textContent = convertTime.minutes;
-    refs.seconds.textContent = convertTime.seconds;
+   
 
     refs.startBtn.addEventListener('click', startCounter)
 
