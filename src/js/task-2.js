@@ -28,23 +28,23 @@ function dateChoosing() {
         return
     }
     
- refs.startBtn.style.display = 'block';
-   
+    refs.startBtn.style.display = 'block';
 
-    let convertTime = convertMs(time);
-
-   
+function convertTime(){
+ let convertTime = convertMs(time);
+ refs.days.textContent = convertTime.days;
+refs.hours.textContent = convertTime.hours;
+refs.minutes.textContent = convertTime.minutes;
+    refs.seconds.textContent = convertTime.seconds;
+}
+convertTime()
 
     refs.startBtn.addEventListener('click', startCounter)
 
     function startCounter() {
         const intervalId = setInterval(() => {
             time -= 1000;
-           convertTime = convertMs(time);
-            refs.days.textContent = convertTime.days;
-            refs.hours.textContent = convertTime.hours;
-            refs.minutes.textContent = convertTime.minutes;
-            refs.seconds.textContent = convertTime.seconds;
+          return convertTime()
             if (time < 1000) {
                 clearInterval(intervalId);
             }
